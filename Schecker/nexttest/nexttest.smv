@@ -1,0 +1,22 @@
+MODULE main
+VAR
+   location: {line7,line8,line9,line11,line13,line15,line17,line19};
+
+DEFINE
+	s11 := location in { line11};	
+	s13 := location in { line13};
+
+ASSIGN
+	init(location) := line7;
+	next(location) := 
+		case
+			location = line7 : {line8};
+			location = line8 : {line9,line15};
+			location = line9 : {line11,line13};
+			location = line11 : {line7};
+			location = line13 :{line7};
+			location = line15 :{line17,line19};
+			location = line17 :{line7};
+			location = line19 : {line7};
+		esac;
+SPEC AG (s11  -> EX s13)

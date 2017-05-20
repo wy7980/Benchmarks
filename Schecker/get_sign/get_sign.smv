@@ -1,0 +1,25 @@
+MODULE main
+VAR
+   location: {line9,line15,line20,line11,line17,line22,line25,line29,line30,line31,line32};
+
+DEFINE
+	equal := location in { line9};	
+	judge_less := location in {line17};
+
+ASSIGN
+	init(location) := line29;
+	next(location) := 
+		case
+			location = line29 : {line30};
+			location = line30 : {line31};
+			location = line31 : {line32};
+			location = line32 : {line9, line15,line20};
+			location = line9 :{line11};
+			location = line15 :{line17};
+			location = line20 :{line22};
+			location = line11 : {line25};
+			location = line17 : {line25};
+			location = line22 : {line25};
+			location = line25 : {line29};
+		esac;
+SPEC AG (equal  -> EX judge_less)

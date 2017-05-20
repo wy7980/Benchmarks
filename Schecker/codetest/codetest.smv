@@ -1,0 +1,24 @@
+MODULE main
+VAR
+   location: {line1,line2,line3,line4,line5,line6,line7,line8,line9,line10,line11};
+
+DEFINE
+	asign_b :=location in {line9};
+
+ASSIGN
+	init(location) := line1;
+	next(location) := 
+		case
+			location = line1 : {line2};
+			location = line2 : {line3};
+			location = line3 : {line4};
+			location = line4 : {line5,line8};
+			location = line5 : {line6};
+			location = line6 : {line7};
+			location = line7 : {line11};
+			location = line8 : {line9};
+			location = line9 : {line10};
+			location = line10 : {line11};
+			location = line11 : {line1};
+		esac;
+SPEC AG (asign_b)
