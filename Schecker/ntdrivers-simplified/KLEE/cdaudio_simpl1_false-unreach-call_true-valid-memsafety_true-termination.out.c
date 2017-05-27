@@ -52,6 +52,22 @@ int Suspended ;
 int KernelMode ;
 int DeviceUsageTypePaging ;
 
+int nexttest(int x, int y)
+{
+ if(x>3){
+    if(y<5){
+        return 0;
+    }else{
+        return 1;
+    }
+ }else{
+    if(y==6){
+        return 2;
+    }else{
+        return 3;
+    }
+ }
+}
 void errorFn(void) 
 { 
 
@@ -1973,6 +1989,7 @@ klee_make_symbolic(&tmp_ndt_3, sizeof(tmp_ndt_3),"tmp_ndt_3");
       }
     }
   }
+
   return (status);
 }
 }

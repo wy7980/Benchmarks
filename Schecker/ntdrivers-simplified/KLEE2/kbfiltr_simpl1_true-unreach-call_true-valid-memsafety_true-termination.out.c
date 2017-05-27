@@ -328,7 +328,7 @@ klee_make_symbolic(&irp_choice, sizeof(irp_choice),"irp_choice");
  int devobj;
 klee_make_symbolic(&devobj, sizeof(devobj),"devobj");
   int __cil_tmp8 ;
-
+  errorFn();//ADD FOR MC
   {
   {
 ;
@@ -355,6 +355,7 @@ NP  = 0;
   pirp = irp;
   _BLAST_init();
   }
+
   if (status >= 0) {
     s = NP;
     customIrp = 0;

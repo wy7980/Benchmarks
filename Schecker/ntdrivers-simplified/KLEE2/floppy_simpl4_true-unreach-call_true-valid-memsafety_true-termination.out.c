@@ -114,7 +114,7 @@ int PagingReferenceCount  =    0;
 int PagingMutex  =    0;
 int FlAcpiConfigureFloppy(int DisketteExtension , int FdcInfo ) 
 { 
-
+errorFn();//MC ADD
   {
   return (0);
 }

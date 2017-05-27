@@ -862,6 +862,7 @@ klee_make_symbolic(&tmp_ndt_1, sizeof(tmp_ndt_1),"tmp_ndt_1");
     }
   }
   status = 0;
+  errorFn();//ADD FOR MC
   return (status);
 }
 }
