@@ -1,4 +1,4 @@
-
+﻿
 from sv-benchmarks(https://github.com/sosy-lab/sv-benchmarks/tree/master/c/ntdrivers-simplified)
 
 ## test1
@@ -8,7 +8,7 @@ spec
 AG a<5 next a>=5;
 endspec
 ```
-| No |                                 programe name                                 |
+| No |                                 program name                                 |
 |----|-------------------------------------------------------------------------------|
 |  1 | cdaudio_simpl1_true-unreach-call_true-valid-memsafety_true-termination.out.c  |
 |  2 | floppy_simpl3_false-unreach-call_true-valid-memsafety_true-termination.out.c  |
@@ -40,7 +40,7 @@ spec
 AG a<5 next a<5;
 endspec
 ```
-| No |                                 programe name                                 |
+| No |                                 program name                                 |
 |----|-------------------------------------------------------------------------------|
 |  1 | cdaudio_simpl1_true-unreach-call_true-valid-memsafety_true-termination.out.c  |
 |  2 | floppy_simpl3_false-unreach-call_true-valid-memsafety_true-termination.out.c  |
