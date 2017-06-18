@@ -42,8 +42,8 @@ $ klee -search=dfs get_sign.bc
 | type |        property        | satisfiability |
 |------|------------------------|----------------|
 | EF   | E F a>0                | satisfied      |
-| EG   | E a>0 G b!=3           | unsatisfied    |
-| EG   | E a>0 and b!=3 G b=3   | unsatisfied    |
+| EG   | E a>0 G b!=3           | satisfied      |
+| EG   | E a>0 and b!=3 G b!=5  | satisfied      |
 | EU   | E a>=0 U b=3           | satisfied      |
 | EU   | E a<0 U b=3 and a>=0   | unsatisfied    |
 | EX   | E a<0 X b<4            | satisfied      |
