@@ -1,0 +1,17 @@
+spec
+E F a>0;
+E a>0 G b!=3;
+E a>0 and b!=3 G b!=5;
+E a>=0 U b=3;
+E a<0 U b=3 and a>=0;
+E a<0 X b<4;
+E a>0 and b=4 X a<0;
+E a<0 and b<4 F a>2;
+E a>=0 and b=3 F b>4;
+A a>=0 U a>=0 and b!=3;
+A a<0 U a>=0 and b>=4;
+A a<0 X a<3;
+A a>=0 and b=3 X b>3;
+A a<0 F a>4;
+A a<0 F b!=4;
+endspec
