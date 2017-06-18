@@ -1,3 +1,0 @@
-spec
-AG a<5 next a>=5;
-endspec
