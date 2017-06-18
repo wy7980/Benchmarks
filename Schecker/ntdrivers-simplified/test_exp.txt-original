@@ -1,0 +1,32 @@
+spec
+# cdaudio_simpl1_false
+#E F irpSp__MinorFunction = 0;
+#E irpSp__MinorFunction != 0 X irpSp__MinorFunction = 22;
+#E irpSp__MinorFunction = 0 U irpSp__MinorFunction = 22;
+
+#floppy_simpl3_false
+#E F irpSp__MinorFunction = 5;
+#A irpSp__MinorFunction != 5 X irpSp__MinorFunction = 1;
+
+#floppy_simpl4_false
+#E tmp_ndt_2 != 1 X tmp_ndt_3 = 2;
+#A tmp_ndt_2 != 1 X tmp_ndt_3 = 2;
+#E tmp_ndt_1 =0 X tmp_ndt_2 = 1; 
+
+#floppy_simpl4_true
+#A tmp_ndt_10=0 U tmp_ndt_10!=0 and tmp_ndt_11=1;
+#E disketteExtension__InterfaceString__Buffer= 1 X irpSp__Parameters__DeviceIoControl__OutputBufferLength < sizeof__MOUNTDEV_UNIQUE_ID;
+
+#kbfiltr_simpl1_true
+#E irpStack__MinorFunction != 0 and irpStack__MinorFunction!=23 F irpStack__MinorFunction = 19;
+#A irpStack__MinorFunction!=0 and irpStack__MinorFunction!=23 F  irpStack__MinorFunction=0;
+
+#kbfiltr_simpl2_false
+#E irpStack__MinorFunction=6 X irpStack__MinorFunction=13;
+#A irpStack__MinorFunction!=6 F irpStack__MinorFunction=3;
+
+# kbfiltr_simpl2_true
+E tmp_ndt_6 = 0 F tmp_ndt_7=1;
+E irpStack__MinorFunction!=2 U irpStack__MinorFunction=1;
+
+endspec
