@@ -3,7 +3,7 @@ original source get from sv-benchmarks(https|//github.com/sosy-lab/sv-benchmarks
 
 
 
-## test1
+# test1
 |No|programe name|
 |---|---|
 |1|floppy_simpl3_false-unreach-call_true-valid-memsafety_true-termination.out.c|
@@ -30,9 +30,9 @@ original source get from sv-benchmarks(https|//github.com/sosy-lab/sv-benchmarks
 | EF   | E F a>0                | satisfied      |
 | EG   | E a>0 G b!=3           | satisfied      |
 | EG   | E a>0 and b!=3 G b!=5  | satisfied      |
-| EU   | E a>=0 U b=3	satisfied |                |
+| EU   | E a>=0 U b=3           | satisfied      |
 | EU   | E a<0 U b=3 and a>=0   | unsatisfied    |
-| EX   | E a<0 X b<4	satisfied  |                |
+| EX   | E a<0 X b<4            | satisfied      |
 | EX   | E a>0 and b=4 X a<0    | unsatisfied    |
 | EF   | E a<0 and b<4 F a>2    | unsatisfied    |
 | EF   | E a>=0 and b=3 F b>4   | satisfied      |
